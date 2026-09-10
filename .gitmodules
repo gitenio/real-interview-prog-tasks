@@ -1,0 +1,3 @@
+[submodule "python/python/decorator"]
+	path = python/python/decorator
+	url = https://github.com/gitenio/real-interview-prog-tasks
