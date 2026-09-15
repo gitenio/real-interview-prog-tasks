@@ -1,15 +1,15 @@
-package org.prime.java.infra;
+package org.primec.app.infra;
 
 /*
  * Copyright (C) 2026. Primechannel Corporation Ltd.
  *
  * Project : compare-comparator-fun
  * File name : NumericComparator.java
- * Last modified : 9/10/26, 6:44 PM
+ * Last modified : 9/11/26, 10:28 AM
  * Author : Jack Malik
  */
 
-import org.prime.java.entity.Player;
+import org.primec.app.entity.Player;
 
 import java.util.*;
 

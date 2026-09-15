@@ -1,15 +1,15 @@
-package org.prime.java.entity;
+package org.primec.app.entity;
 
 /*
  * Copyright (C) 2026. Primechannel Corporation Ltd.
  *
  * Project : compare-comparator-fun
  * File name : Player.java
- * Last modified : 9/10/26, 6:25 PM
+ * Last modified : 9/11/26, 10:28 AM
  * Author : Jack Malik
  */
 import java.util.*;
-import lombok.NonNull;
+
 import org.jetbrains.annotations.NotNull;
 
 public class Player implements Comparable<Player>, Comparator<Object> {

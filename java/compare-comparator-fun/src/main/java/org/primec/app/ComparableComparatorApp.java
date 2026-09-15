@@ -1,19 +1,19 @@
-package org.prime.java.app;
+package org.primec.app;
 
 /*
  * Copyright (C) 2026. Primechannel Corporation Ltd.
  *
  * Project : compare-comparator-fun
  * File name : ComparableComparatorApp.java
- * Last modified : 9/10/26, 6:08 PM
+ * Last modified : 9/11/26, 10:28 AM
  * Author : Jack Malik
  */
 
 import java.util.*;
 
-import org.prime.java.entity.Player;
-import org.prime.java.infra.AlphaComparator;
-import org.prime.java.infra.NumericComparator;
+import org.primec.app.entity.Player;
+import org.primec.app.infra.AlphaComparator;
+import org.primec.app.infra.NumericComparator;
 
 public class ComparableComparatorApp {
 
