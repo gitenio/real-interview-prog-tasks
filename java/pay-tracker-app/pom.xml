@@ -1,0 +1,174 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.jack</groupId>
+  <artifactId>paytracker</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <version.plugin.surefire>3.5.4</version.plugin.surefire>
+      <!--
+      <maven.compiler.source>21</maven.compiler.source>
+      <maven.compiler.target>21</maven.compiler.target>
+  -->
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.muserver</groupId>
+      <artifactId>mu-server</artifactId>
+      <version>1.0.5</version>
+    </dependency>
+
+      <dependency>
+          <groupId>commons-validator</groupId>
+          <artifactId>commons-validator</artifactId>
+          <version>1.7</version>
+      </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.17</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20210307</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+      <version>2.16.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+      <version>2.6.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.5.19</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>2.2.222</version>
+    </dependency>
+
+
+<!--
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.12.2</version>
+      <scope>test</scope>
+      </dependency>
+-->
+      
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-engine</artifactId>
+          <version>5.11.0-M2</version>
+          <scope>test</scope>
+      </dependency>
+    <!--
+	<dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+        <scope>test</scope>
+	</dependency>
+    -->
+    
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.20.0</version>
+      <scope>test</scope>
+    </dependency>
+
+	<dependency>
+	<groupId>org.mockito</groupId>
+	<artifactId>mockito-junit-jupiter</artifactId>
+	<version>5.20.0</version>
+	<scope>test</scope>
+	</dependency>
+
+    <!-- to force junit5 independent of project dependencies 
+	 <dependency>
+	 
+	 <groupId>org.apache.maven.surefire</groupId>
+	 <artifactId>surefire-junit-platform</artifactId>
+	 <version>${version.plugin.surefire}</version>
+	 </dependency>
+    -->
+
+
+
+  </dependencies>  
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+
+    <plugins>
+
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version> <!-- Use the latest version -->
+            <configuration>
+                <source>21</source> <!-- JDK source version -->
+                <target>21</target> <!-- JDK target version -->
+                <release>21</release> <!-- Use this for JDK 9+ to ensure API compatibility -->
+            </configuration>
+        </plugin>
+
+<!--
+
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.3</version>
+        <executions>
+          <execution>
+            <id>default-test</id>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+        </dependencies>
+	</plugin>
+-->
+
+	  <plugin>
+	  <groupId>org.apache.maven.plugins</groupId>
+	  <artifactId>maven-surefire-plugin</artifactId>
+	  <version>3.2.5</version>
+          <configuration>
+              <!--
+              <argLine>
+                  -javaagent:${org.mockito:mockito-core:jar}
+                  -Xshare:off
+              </argLine>
+              -->
+          </configuration>
+	  </plugin>
+    </plugins>
+  </build>
+</project>
